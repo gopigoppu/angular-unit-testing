@@ -9,7 +9,7 @@ import { RegisterUserComponent } from '../../modal/register-user/register-user.c
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private modalService: NgbModal) { }
+  constructor(public modalService: NgbModal) { }
 
   ngOnInit() {
   }
