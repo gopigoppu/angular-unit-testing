@@ -23,7 +23,14 @@ export class ActivatedRouteStub {
   /** Set the paramMap observables's next value */
   setParamMap(params?: Params) {
     this.subject.next(convertToParamMap(params));
+  }
+}
+
+export function routerStub() {
+  const router = {
+    navigate: jasmine.createSpy('navigate')
   };
+  return router;
 }
 
 

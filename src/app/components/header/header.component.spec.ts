@@ -62,11 +62,11 @@ describe('HeaderComponent', () => {
         title: 'hello'
       }
     };
-    spyOn(component.modalService, 'open').and.returnValue(modalRes);
+    spyOn((component as any).modalService, 'open').and.returnValue(modalRes);
     const bannerDe: DebugElement = fixture.debugElement;
     const buttonDe = bannerDe.query(By.css('.pointer-cursor'));
     click(buttonDe);
-    expect(component.modalService.open).toHaveBeenCalled();
+    expect((component as any).modalService.open).toHaveBeenCalled();
     expect(buttonDe.nativeElement.textContent).toContain('Register');
   });
 });

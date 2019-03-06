@@ -12,6 +12,7 @@ export class ResultCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.repo);
   }
 
 }
