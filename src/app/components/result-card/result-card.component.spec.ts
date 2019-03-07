@@ -44,7 +44,7 @@ describe('ResultCardComponent', () => {
       forks: 100,
       stargazers_count: 98,
       name: 'Interview Questions',
-      score: 99
+      score: 99.3
     };
     fixture.detectChanges();
     const de: DebugElement = fixture.debugElement;
