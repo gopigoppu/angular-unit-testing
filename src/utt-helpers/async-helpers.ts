@@ -17,3 +17,12 @@ export function observerSuccessStub(value: any): Observable<Params> {
 export function observerErrorStub(value: any): Observable<Params> {
   return throwError(value);
 }
+
+export function setTimeoutSpy() {
+  const spy = spyOn(window, 'setTimeout');
+  spy.and.callFake((callBack?, waitTime?) => {
+    if (callBack) {
+      return callBack();
+    }
+  });
+}
